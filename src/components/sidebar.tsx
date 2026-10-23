@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { SubmitButton } from "@/components/submit-button";
 import { useState } from "react";
 import Link from "next/link";
@@ -48,7 +49,13 @@ export function Sidebar({
         >
           ☰
         </button>
-        <img src="/logo.png" alt="Agendix" />
+        <Image
+          width={1401}
+          height={360}
+          sizes="310px"
+          src="/logo.png"
+          alt="Agendix"
+        />
         <span className="avatar">{userEmail.slice(0, 1).toUpperCase()}</span>
       </header>
       {mobileOpen && (
@@ -67,8 +74,18 @@ export function Sidebar({
       >
         <div className="sidebar-header">
           <Link href="/app" onClick={() => setMobileOpen(false)}>
-            <img src="/logo.png" alt="Agendix" className="sidebar-logo" />
-            <img
+            <Image
+              width={1401}
+              height={360}
+              sizes="310px"
+              src="/logo.png"
+              alt="Agendix"
+              className="sidebar-logo"
+            />
+            <Image
+              width={192}
+              height={192}
+              sizes="39px"
               src="/icons/icon-192.png"
               alt=""
               className="sidebar-logo-small"

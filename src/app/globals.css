@@ -93,6 +93,7 @@ h2 {
   pointer-events: none;
 }
 .auth-logo {
+  height: auto;
   width: min(310px, 90%);
   max-height: 95px;
   object-fit: contain;
@@ -679,6 +680,7 @@ select:focus {
   margin: 0 auto 18px;
 }
 .invite-logo {
+  height: auto;
   width: 170px;
   margin-bottom: 30px;
 }

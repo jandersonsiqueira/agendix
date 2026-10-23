@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { safeNext } from "@/lib/redirect";
 
@@ -14,7 +15,14 @@ export default async function ConfirmEmail({
   return (
     <main className="invite-screen">
       <section className="card invite-card confirmation-card">
-        <img src="/logo.png" alt="Agendix" className="invite-logo" />
+        <Image
+          width={1401}
+          height={360}
+          sizes="310px"
+          src="/logo.png"
+          alt="Agendix"
+          className="invite-logo"
+        />
         <div className="empty-illustration" aria-hidden="true">
           ✉
         </div>
