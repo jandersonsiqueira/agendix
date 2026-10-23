@@ -1,0 +1,9 @@
+project_id = "agendix"
+[auth]
+enable_signup = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/callback", "http://localhost:3000/auth/confirm", "http://localhost:3000/redefinir-senha"]
+[auth.email]
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = true
