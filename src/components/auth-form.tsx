@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -112,7 +114,14 @@ export function AuthForm({ mode }: { mode: Mode }) {
   return (
     <div className="auth-layout">
       <section className="auth-intro">
-        <img src="/logo.png" alt="Agendix" className="auth-logo" />
+        <Image
+          width={1401}
+          height={360}
+          sizes="310px"
+          src="/logo.png"
+          alt="Agendix"
+          className="auth-logo"
+        />
         <h1>Seu tempo vale mais.</h1>
         <p>
           Uma experiência simples e inteligente para organizar os seus
@@ -125,8 +134,18 @@ export function AuthForm({ mode }: { mode: Mode }) {
         </div>
       </section>
       <section className="auth-panel">
+        <div className="auth-theme-control">
+          <ThemeToggle />
+        </div>
         <div className="auth-card">
-          <img src="/logo.png" alt="Agendix" className="auth-mobile-logo" />
+          <Image
+            width={1401}
+            height={360}
+            sizes="310px"
+            src="/logo.png"
+            alt="Agendix"
+            className="auth-mobile-logo"
+          />
           <div className="eyebrow">BEM-VINDO AO AGENDIX</div>
           <h2>{labels[mode]}</h2>
           <p className="muted">

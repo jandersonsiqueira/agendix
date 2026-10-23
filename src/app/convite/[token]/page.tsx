@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { SubmitButton } from "@/components/submit-button";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
@@ -16,8 +18,18 @@ export default async function Invitation({
   const next = `/convite/${token}`;
   return (
     <main className="invite-screen">
+      <div className="public-theme-control">
+        <ThemeToggle />
+      </div>
       <div className="card invite-card">
-        <img src="/logo.png" alt="Agendix" className="invite-logo" />
+        <Image
+          width={1401}
+          height={360}
+          sizes="310px"
+          src="/logo.png"
+          alt="Agendix"
+          className="invite-logo"
+        />
         <div className="empty-illustration">✉</div>
         <h1>Você recebeu um convite!</h1>
         <p>

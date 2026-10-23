@@ -64,6 +64,7 @@ Para testes de convite, use duas contas com e-mails confirmados. A primeira cria
 ```bash
 npm run dev
 npm run typecheck
+npm run lint
 npm test
 npm run build
 ```
