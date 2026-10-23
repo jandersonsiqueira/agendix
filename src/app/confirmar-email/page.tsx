@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
 import { safeNext } from "@/lib/redirect";
 
@@ -14,6 +15,9 @@ export default async function ConfirmEmail({
 
   return (
     <main className="invite-screen">
+      <div className="public-theme-control">
+        <ThemeToggle />
+      </div>
       <section className="card invite-card confirmation-card">
         <Image
           width={1401}

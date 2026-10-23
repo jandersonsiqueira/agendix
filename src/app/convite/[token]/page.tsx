@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { SubmitButton } from "@/components/submit-button";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
@@ -17,6 +18,9 @@ export default async function Invitation({
   const next = `/convite/${token}`;
   return (
     <main className="invite-screen">
+      <div className="public-theme-control">
+        <ThemeToggle />
+      </div>
       <div className="card invite-card">
         <Image
           width={1401}

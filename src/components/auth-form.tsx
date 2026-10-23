@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -133,6 +134,9 @@ export function AuthForm({ mode }: { mode: Mode }) {
         </div>
       </section>
       <section className="auth-panel">
+        <div className="auth-theme-control">
+          <ThemeToggle />
+        </div>
         <div className="auth-card">
           <Image
             width={1401}
