@@ -179,7 +179,7 @@ begin
         raise exception 'Sem permissão';
     end if;
     return query
-        select m.user_id, p.full_name, coalesce(u.email, ''), m.role, m.status
+        select m.user_id, p.full_name, coalesce(u.email, '')::text, m.role, m.status
         from public.organization_members m
         join auth.users u on u.id = m.user_id
         left join public.profiles p on p.id = m.user_id
